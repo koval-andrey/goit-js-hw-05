@@ -4,18 +4,18 @@
   добавь метод getInfo(), который выводит в консоль значения 
   полей login и email объекта который его вызвал.*/
 
-  const Account = function(login, email) {
+  function Account({login, email}) {
       this.login = login;
       this.email = email;
-      console.log(Account);
   };
 
-  Account.prototype.getInfo = function()
-  { 
-      return `Login: ${this.login} Email: ${this.email}`
+  Account.prototype.getInfo = function() {
+   
+    console.log(`Login: ${this.login}, Email: ${this.email}`);
+   
   };
+  
 console.log(Account.prototype.getInfo); // function
-
 const mango = new Account({
   login: 'Mangozedog',
   email: 'mango@dog.woof',
