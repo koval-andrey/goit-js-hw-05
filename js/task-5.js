@@ -1,17 +1,16 @@
 /*Напиши класс Car с указанными свойствами и методами.*/
 
 class Car {
-    static getSpecs(car) { 
-     console.log(`maxSpeed: ${car._maxSpeed}, speed:${car._speed}, 
-     isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`)    
-     }   
-     
+  
   /*
    * Добавь статический метод `getSpecs(car)`,
    * который принимает объект-машину как параметр и выводит
    * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
    */
-
+  static getSpecs(car) { 
+    console.log(`maxSpeed: ${car._maxSpeed}, speed:${car._speed}, 
+    isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`)    
+    }
   /*
    * Конструктор получает объект настроек.
    *
