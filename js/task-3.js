@@ -12,24 +12,24 @@ removeItem(item) - получет товар и, если он есть, уда�
 */
 
 class Storage {
-    constructor(items) {
-        this._items = items;
-    }  
+  constructor(items) {
+    this._items = items;
+  }
 
-    getItems() {
-        return this._items;
-}
-addItem(item) {
+  getItems() {
+    return this._items;
+  }
+  addItem(item) {
     this._items.push(item);
-}
-removeItem(removedItem) {
-const newItems = [];
-for(const item of this._items) {
-    if(item === removedItem) continue;
-    newItems.push(item);
-}
-this._item = newItems;
-}
+  }
+  removeItem(removedItem) {
+    const newItems = [];
+    for (const item of this._items) {
+      if (item === removedItem) continue;
+      newItems.push(item);
+    }
+    this._item = newItems;
+  }
 }
 
 const storage = new Storage([

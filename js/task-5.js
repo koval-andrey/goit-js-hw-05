@@ -1,16 +1,15 @@
 /*Напиши класс Car с указанными свойствами и методами.*/
 
 class Car {
-  
   /*
    * Добавь статический метод `getSpecs(car)`,
    * который принимает объект-машину как параметр и выводит
    * в консоль значения свойств maxSpeed, speed, isOn, distance и price.
    */
-  static getSpecs(car) { 
+  static getSpecs(car) {
     console.log(`maxSpeed: ${car._maxSpeed}, speed:${car._speed}, 
-    isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`)    
-    }
+    isOn: ${car._isOn}, distance: ${car._distance}, price: ${car._price}`);
+  }
   /*
    * Конструктор получает объект настроек.
    *
@@ -21,30 +20,36 @@ class Car {
    *  isOn - заведен ли автомобиль, значения true или false. Изначально false
    *  distance - общий киллометраж, изначально 0
    */
-  constructor({maxSpeed = 0, speed = 0, isOn = false, distance = 0, price = 0}) {
-      this._maxSpeed = maxSpeed;
-      this._speed = speed;
-      this._isOn = isOn;
-      this._distance = distance;
-      this._price = price;
+  constructor({
+    maxSpeed = 0,
+    speed = 0,
+    isOn = false,
+    distance = 0,
+    price = 0,
+  }) {
+    this._maxSpeed = maxSpeed;
+    this._speed = speed;
+    this._isOn = isOn;
+    this._distance = distance;
+    this._price = price;
   }
 
   /*
    * Добавь геттер и сеттер для свойства price,
    * который будет работать с свойством цены автомобиля.
    */
-    get price(){
+  get price() {
     return this._price;
-   }
-   set price(newPrice) {
-    this._price = newPrice;  
-   } 
+  }
+  set price(newPrice) {
+    this._price = newPrice;
+  }
   /*
    * Добавь код для того чтобы завести автомобиль
    * Записывает в свойство isOn значение true
    */
   turnOn() {
-    this._isOn = true; 
+    this._isOn = true;
   }
 
   /*
@@ -63,11 +68,11 @@ class Car {
    * не больше чем значение свойства maxSpeed
    */
   accelerate(value) {
-      if(this._speed <= this._speed) {
-        this._speed += value;   
-      }
-      else {console.log(`Your speed exceeds the allowable ${this._maxSpeed}`)};
-      
+    if (this._speed <= this._speed) {
+      this._speed += value;
+    } else {
+      console.log(`Your speed exceeds the allowable ${this._maxSpeed}`);
+    }
   }
 
   /*
@@ -75,10 +80,9 @@ class Car {
    * при условии что результирующая скорость не меньше нуля
    */
   decelerate(value) {
-      if(this._speed >0) {
-        this._speed -= value;
-      }
-    
+    if (this._speed > 0) {
+      this._speed -= value;
+    }
   }
 
   /*
@@ -86,9 +90,9 @@ class Car {
    * но только в том случае если машина заведена!
    */
   drive(hours) {
-      if(this._isOn = true) {
-        this._distance += hours * this._speed;      
-      }
+    if ((this._isOn = true)) {
+      this._distance += hours * this._speed;
+    }
   }
 }
 

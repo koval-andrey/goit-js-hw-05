@@ -8,18 +8,19 @@ followers - число
 выводит строку: User ${имя} is ${возраст} years old and has ${кол-во фоловеров} 
 followers*/
 
-function User({name, age, follows}) {
-    this.name = name;
-    this.age = age;
-    this.follows = follows;
+function User({ name, age, follows }) {
+  this.name = name;
+  this.age = age;
+  this.follows = follows;
 }
-User.prototype.getInfo = function() {
-   
-    console.log(`User ${this.name} is ${this.age} years old and has ${this.follows} followers`);
+User.prototype.getInfo = function () {
+  console.log(
+    `User ${this.name} is ${this.age} years old and has ${this.follows} followers`
+  );
 };
 
-  const mango = new User({
-  name: 'Mango',
+const mango = new User({
+  name: "Mango",
   age: 2,
   followers: 20,
 });
