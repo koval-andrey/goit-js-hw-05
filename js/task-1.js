@@ -4,7 +4,8 @@
   добавь метод getInfo(), который выводит в консоль значения 
   полей login и email объекта который его вызвал.*/
 
-  function Account({ login, email }) {
+  
+  /*function Account({ login, email }) {
     this.login = login;
     this.email = email;
   }
@@ -24,4 +25,4 @@ const poly = new Account({
   email: 'poly@mail.com',
 });
 
-poly.getInfo(); // Login: Poly, Email: poly@mail.com
+poly.getInfo(); // Login: Poly, Email: poly@mail.com*/
